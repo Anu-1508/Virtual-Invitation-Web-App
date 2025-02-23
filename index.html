@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>evoke-login and regitration webpage for virtual invitations</title>
+    <link rel="stylesheet"href="style.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">Evoke</h2>
+        <nav class="navigation">
+            <a href="#" id="Home-link">Home</a>
+            <a href="#" id="About-link">About</a>
+            <a href="#" id="Services-link">Services</a>
+            <a href="#" id="Contact-link">Contact</a>
+            <button class="btnlogin-popup">Login</button>
+        </nav>
+        
+
+
+    </header>
+
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email"  required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password"  required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn" onclick="func()">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+
+        </div>
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" id="username" required>
+                    <label>Username </label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="password" class="pass" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">i agree to the terms and conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    function func() {
+        var username = document.getElementById("username").value;
+        var passwordInput = document.getElementById("password").value;
+
+        if (username === 'anita2024@gmail.com' && passwordInput === '1234') {
+            alert("Successful");
+            window.location.assign("naukri 500.html");
+        } else {
+            alert("Wrong entry");
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var loginForm = document.querySelector('.form-box.login form');
+
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            func();
+        });
+    });
+</script>
+
+
+</body>
+</html>
